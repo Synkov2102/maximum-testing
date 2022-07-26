@@ -1,0 +1,24 @@
+@use "../../node_modules/sass-rem" as rem;
+@import "../../styles/variables.scss";
+
+.wrapper {
+  &:not(:first-child) {
+    margin-top: 16px;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: rem.convert(10px);
+  line-height: rem.convert(13px);
+  font-family: Roboto;
+  margin: 0;
+  color: grey;
+}
+
+.content {
+  font-size: rem.convert(14px);
+  line-height: rem.convert(17px);
+  font-family: Roboto;
+  margin: 0;
+}

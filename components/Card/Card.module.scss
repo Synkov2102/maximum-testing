@@ -1,0 +1,119 @@
+@use "../../node_modules/sass-rem" as rem;
+@import "../../styles/variables.scss";
+
+.card {
+  width: rem.convert(404px);
+  height: rem.convert(506px);
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: rem.convert(0px 6px 32px #0e2a6029);
+  border-radius: rem.convert(8px);
+  box-sizing: border-box;
+  padding: rem.convert(27px 26px);
+  transition: height 1s;
+
+  &:hover {
+    height: rem.convert(543px);
+  }
+
+  &:hover .buy {
+    margin-top: 102px;
+  }
+}
+
+.title {
+  margin: 0;
+  text-align: left;
+  width: fit-content;
+  font-size: rem.convert(16px);
+  line-height: rem.convert(28px);
+  font-family: Roboto;
+  letter-spacing: 0px;
+  color: $black;
+  display: flex;
+}
+
+.year {
+  font-size: rem.convert(14px);
+  line-height: rem.convert(14px);
+  margin-left: rem.convert(6px);
+  justify-self: start;
+  font-family: Roboto;
+  letter-spacing: 0;
+  color: $secondary-color;
+}
+
+.vin {
+  letter-spacing: 1px;
+  font-size: rem.convert(10px);
+  line-height: rem.convert(13px);
+  font-family: Roboto;
+  color: #707b8c;
+  margin-top: rem.convert(6px);
+  margin-bottom: rem.convert(19px);
+}
+
+.carusel {
+  display: flex;
+  width: 100%;
+  height: rem.convert(198px);
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
+
+.img {
+  &:not(:first-child) {
+    margin-left: rem.convert(12px);
+  }
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: rem.convert(32px);
+}
+
+.buy {
+  width: rem.convert(182px);
+  height: rem.convert(48px);
+
+  background: transparent linear-gradient(255deg, #38ef7d 0%, #11998e 100%) 0%
+    0% no-repeat padding-box;
+  border-radius: 8px;
+  border: none;
+  opacity: 1;
+
+  margin-top: 66px;
+  transition: margin 1s;
+
+  font-size: rem.convert(10px);
+  line-height: rem.convert(13px);
+  font-family: Roboto;
+  letter-spacing: 2px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.price {
+  font-size: rem.convert(28px);
+  line-height: rem.convert(28px);
+  font-family: Roboto;
+  margin: 0;
+
+  text-align: end;
+
+  color: $secondary-color;
+
+  &::after {
+    font-size: rem.convert(28px);
+    line-height: rem.convert(28px);
+    font-family: Roboto;
+    color: black;
+    content: " \20BD";
+  }
+}

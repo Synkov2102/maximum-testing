@@ -1,0 +1,17 @@
+@use "../../node_modules/sass-rem" as rem;
+@import "../../styles/variables.scss";
+
+.menu {
+  width: rem.convert(276px);
+  height: rem.convert(56px);
+  
+  background: #35373a 0% 0% no-repeat padding-box;
+  border-radius: rem.convert(4px 4px 0px 0px);
+  opacity: 1;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  text-align: start;
+}
